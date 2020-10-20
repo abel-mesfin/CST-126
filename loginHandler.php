@@ -1,0 +1,68 @@
+<?php
+/*
+Project Name: Milestone 1 User Registeration Module
+Version 1
+pageHandler.php Version 1
+Abel Mesfin 
+09/20/2020
+This module is responsile for creating a connection to the database and uploading data to it
+
+*/
+
+//echo "You are now registered." . "<br>"; 
+
+include('myfuncs.php');
+
+$conn = dbConnect();
+
+
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+  echo "Connection to SQL server failed" . "<br>";
+}else{
+//echo "Connected successfully" . "<br>";
+}
+
+
+//Variables from form
+$username = $_POST['username'];
+$pass = $_POST['password'];
+
+
+//Validate and check if user exists
+if(empty($username)){
+  echo "Username is a required field and cannot be blank.". "<br>";
+}elseif(empty($pass)){
+  echo "A Password is a required field and cannot be blank.". "<br>";
+}else{
+  
+    $sql = "SELECT ID, USERNAME, PASSWORD FROM users WHERE USERNAME='$username' AND BINARY PASSWORD= BINARY'$pass'";
+    $result = $conn->query($sql);
+    
+    //Checks if any rows have returned and if so it logs in
+    if ($result->num_rows == 1) {
+        $row = $result->fetch_assoc();	// Read the Row from the Query
+        saveUserId($row["ID"]);		// Save User ID in the Session
+        include('loginResponse.php');
+    } elseif($result->num_rows == 0) {
+       $message = "Login Failed";
+       include('loginFailed.php');
+    }else{
+        $message = "There are multiple users that have registered";
+        include('loginError.php');
+    }
+
+}
+
+//Check for succesful record creation
+if($conn->query($sql) == TRUE){
+    //echo "New record created succesfully". "<br>";
+}
+else{
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();
+
+?> 
