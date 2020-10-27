@@ -8,20 +8,14 @@ The modules purpose is to create a html form that shows the user the required fi
 -->
 <?php
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
 function dbConnect() {
 //Mysql connection info
-$servername = "abelsblogdb.database.windows.net";
-$connectionOptions = array(
-"Database" => "activity1",
-"Uid" => "abelmesfin",
-"PWD" => "Leba7500"
-);
+$servername = "localhost";
+$username = "root";
+$password = "root";
+$dbname = "activity1";
 
-$conn =  sqlsrv_connect($servername, $connectionOptions);
+$conn = new mysqli($servername, $username, $password, $dbname);
 
 return $conn;
 
