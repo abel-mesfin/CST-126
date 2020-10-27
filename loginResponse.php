@@ -68,7 +68,7 @@ include_once('myfuncs.php');
         <center><h2>Homepage</h2></center>
 
         <h2>Login was successful: 
-            <? //php echo " " . getUserId() ?></h2> 
+            <? php echo " " . $username ?></h2> 
 
     </div>
       
