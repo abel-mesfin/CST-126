@@ -8,28 +8,16 @@ The modules purpose is to create a html form that shows the user the required fi
 -->
 <?php
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
 function dbConnect() {
-// PHP Data Objects(PDO) Sample Code:
-try {
-    $conn = new PDO("sqlsrv:server = tcp:abelsblogdb.database.windows.net,1433; Database = activity1", "abelmesfin", "Leba7500");
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-}
-catch (PDOException $e) {
-    print("Error connecting to SQL Server.");
-    die(print_r($e));
-}
-
-// SQL Server Extension Sample Code:
-$connectionInfo = array("UID" => "abelmesfin", "pwd" => "Leba7500", "Database" => "activity1", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
-$serverName = "tcp:abelsblogdb.database.windows.net,1433";
-$conn = sqlsrv_connect($serverName, $connectionInfo);
+//Mysql connection info
+$servername = "127.0.0.1:54939";
+$username = "azure";
+$password = "6#vWHD_$";
+$dbname = "activity1";
+	
+$conn = new mysqli($servername, $username, $password, $dbname);
 
 return $conn;
-
 
 }
 
