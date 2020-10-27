@@ -8,6 +8,10 @@ The modules purpose is to create a html form that shows the user the required fi
 -->
 <?php
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 function dbConnect() {
 //Mysql connection info
 $servername = "abelsblogdb.database.windows.net";
