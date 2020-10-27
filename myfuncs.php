@@ -11,11 +11,13 @@ The modules purpose is to create a html form that shows the user the required fi
 function dbConnect() {
 //Mysql connection info
 $servername = "abelsblogdb.database.windows.net";
-$username = "abelmesfin";
-$password = "Leba7500";
-$dbname = "activity1";
+$connectionOptions = array(
+"Database" => "activity1",
+"Uid" => "abelmesfin",
+"PWD" => "Leba7500"
+);
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn =  sqlsrv_connect($servername, $connectionOptions);
 
 return $conn;
 
