@@ -7,6 +7,9 @@ Abel Mesfin
 The modules purpose is to create a html form that shows the user the required fields for regiseration
 -->
 <?php 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 include_once('myfuncs.php');
 
 ?>
@@ -69,7 +72,11 @@ include_once('myfuncs.php');
         <center><h2>Homepage</h2></center>
 
         <h2>Login was successful: 
-            <?php echo " "  ?></h2> 
+            <?php 
+            ini_set('display_errors', 1);
+            ini_set('display_startup_errors', 1);
+            error_reporting(E_ALL);
+            echo " "  ?></h2> 
 
     </div>
       
