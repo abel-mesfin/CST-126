@@ -72,11 +72,11 @@ $username = $_POST['username'];
         <center><h2>Homepage</h2></center>
 
         <h2>Login was successful: 
-            <? 
-            ini_set('display_errors', 1);
+            <? php 
+        ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL); 
-            php echo " " . $username ?></h2> 
+            echo " " . $username ?></h2> 
 
     </div>
       
