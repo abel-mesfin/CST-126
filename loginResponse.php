@@ -69,11 +69,7 @@ include_once('myfuncs.php');
         <center><h2>Homepage</h2></center>
 
         <h2>Login was successful: 
-            <? php 
-                ini_set('display_errors', 1);
-                ini_set('display_startup_errors', 1);
-                error_reporting(E_ALL); 
-            echo " "  ?></h2> 
+            <?php echo " "  ?></h2> 
 
     </div>
       
