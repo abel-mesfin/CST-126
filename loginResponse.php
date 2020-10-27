@@ -8,7 +8,7 @@ The modules purpose is to create a html form that shows the user the required fi
 -->
 <?php 
 include_once('myfuncs.php');
-$username = $_POST['username'];
+
 ?>
 <?php if(!empty(getUserId())): ?>
 <html>
