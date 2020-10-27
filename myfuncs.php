@@ -10,9 +10,9 @@ The modules purpose is to create a html form that shows the user the required fi
 
 function dbConnect() {
 //Mysql connection info
-$servername = "localhost";
-$username = "root";
-$password = "root";
+$servername = "abelsblogdb.database.windows.net";
+$username = "abelmesfin";
+$password = "Leba7500";
 $dbname = "activity1";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
