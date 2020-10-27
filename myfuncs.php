@@ -11,7 +11,7 @@ The modules purpose is to create a html form that shows the user the required fi
 function dbConnect() {
 // PHP Data Objects(PDO) Sample Code:
 try {
-    $conn = new PDO("sqlsrv:server = tcp:abelsblogdb.database.windows.net,1433; Database = activity1", "abelmesfin", "{your_password_here}");
+    $conn = new PDO("sqlsrv:server = tcp:abelsblogdb.database.windows.net,1433; Database = activity1", "abelmesfin", "Leba7500");
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
 catch (PDOException $e) {
