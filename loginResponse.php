@@ -77,7 +77,7 @@ $username = $_POST['username'];
             ini_set('display_errors', 1);
             ini_set('display_startup_errors', 1);
             error_reporting(E_ALL);
-            echo " "  ?></h2> 
+            echo " " . $username ?></h2> 
 
     </div>
       
