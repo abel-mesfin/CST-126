@@ -11,7 +11,7 @@ include_once('myfuncs.php');
 if(empty(getUserId()) ): ?>
 <html>
 <head >
-    <title>My Activity 2 Application</title>   
+    <title>Abels Blog</title>   
 
     <style>
         body {
