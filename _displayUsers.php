@@ -21,8 +21,8 @@ table, th{
 
 <?php
 require_once('utility.php');
-$posts = getAllPosts();
-print_r($posts);
+$users = getAllUsers();
+print_r($users);
 
 /*for($x=0;$x < count($users);$x++){
     echo "<tr>";
