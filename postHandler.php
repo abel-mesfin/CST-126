@@ -62,7 +62,7 @@ VALUES (NULL, '$vari', '$Title', '$body', '$published','$name', '$image', '$cats
 //Check for succesful record creation
 if($conn->query($sql) == TRUE){
     echo "New record created succesfully". "<br>";
-    header("Location: http://localhost:8888/Milestone4/updateSuccess.html");
+    header("Location: https://abelsblog.azurewebsites.net/updateSuccess.html");
 }
 else{
   echo "<script>";
