@@ -96,7 +96,7 @@ if($conn->query($sql) == TRUE){
 else{
     //echo "Error: " . $sql . "<br>" . $conn->error;
 }
-    header("Location: http://localhost:8888/Milestone4/updateSuccess.html");
+    header("Location: https://abelsblog.azurewebsites.net/updateSuccess.html");
 }catch(Exception $e){
     $update = 0;
 }
