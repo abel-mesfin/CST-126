@@ -22,7 +22,7 @@ table, th{
 <?php
 require_once('utility.php');
 $users = getAllUsers();
-print_r($users);
+
 
 /*for($x=0;$x < count($users);$x++){
     echo "<tr>";
