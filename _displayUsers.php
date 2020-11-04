@@ -24,14 +24,14 @@ require_once('utility.php');
 $users = getAllUsers();
 
 
-/*for($x=0;$x < count($users);$x++){
+for($x=0;$x < count($users);$x++){
     echo "<tr>";
         echo "<td>" . $users[$x]['ID'] . "</td>";  
         echo "<td>" .  $users[$x]['first_name'] . "</td>";
         echo "<td>" . $users[$x]['last_name'] . "</td>";
     echo "</tr>";
     
-} */
+} 
 ?>
 
 </table>
